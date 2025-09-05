@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      width: 300px;
+      text-align: center;
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 8px;
+      background: #2575fc;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1a5ed9;
+    }
+
+    .option-btn {
+      background: #6a11cb;
+    }
+
+    .option-btn:hover {
+      background: #4b0f94;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Hospital Management Login</h2>
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="password" id="password" placeholder="Enter Password">
+    
+    <button class="btn">Login</button>  
+    <!-- <button class="btn option-btn">Anonymous Login</button> -->
+  <p>User="atharva" Pass="admin"</p>
+  </div>
+</body>
+<script>
+  document.querySelector('.btn').addEventListener('click', function() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if(username === "atharva" && password === "admin") {
+      window.location.href = "dashboard.html";
+    }
+    if(username === "dhanshri" && password === "dhanshri") {
+      window.location.href = "dashboard.html";
+    }
+    if(username === "mansi" && password === "mansi") {
+      window.location.href = "dashboard.html";
+    }
+    if(username === "shravani" && password === "shravani") {
+      window.location.href = "dashboard.html";
+    } 
+  });
+
+  document.querySelector('.option-btn').addEventListener('click', function() {
+    alert('Anonymous Login successful!');
+    window.location.href = "dashboard.html";
+    
+  });
+</script>
+</html>
